@@ -3,15 +3,14 @@ import "./style.css";
 
 function Card({ children }) {
   return (
-    <div class="card">
-      <div class="card-header">
+    <div className="card">
+      <div className="card-header">
         Database
   </div>
-      <div class="card-body">
-        <h5 class="card-title">Teleheal Device Information</h5>
-        <p class="card-text">To know if the device is offline, use the button bellow " Ping Device"</p>
+      <div className="card-body">
+        <h5 className="card-title">Teleheal Device Information</h5>
+        <p className="card-text">To know if the device is offline, use the button bellow "Ping Device"</p>
         {children}
-        <a href="#" class="btn btn-primary">Ping Device</a>
       </div>
     </div> 
   );

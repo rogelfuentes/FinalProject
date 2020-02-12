@@ -46,3 +46,11 @@
   /* max-width: 100%;
   margin: 0 auto; */
 }
+
+.d-flex {
+  border-style: solid;
+  border-color: rgba(112, 128, 144, 0.379);
+  border-radius: 20%;
+  border-width: 1px
+
+}

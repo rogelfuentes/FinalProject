@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import DeleteBtn from "../components/DeleteBtn";
-import Jumbotron from "../components/Jumbotron";
+// import DeleteBtn from "../components/DeleteBtn";
+// import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
-import { List, ListItem } from "../components/List";
+import { List} from "../components/List";
 // import { Input, TextArea, FormBtn } from "../components/Form";
-import SearchBar from "../components/SearchBar";
+// import SearchBar from "../components/SearchBar";
 
 class Devices extends Component {
   state = {
@@ -72,21 +72,23 @@ class Devices extends Component {
               <List>
 
                 {this.state.devices.map(device => (
-                  < tr key={device._id}>
-                    
-                    <td><Link to={"/devices/" + device._id}>
-                    {device.displayName}
-                    </Link></td>
-                    <td>{device.deviceId}</td>
-                    <td>{device.facility}</td>
-                    <td>{device.unit}</td>
-                    <td>{device.sip}</td>
-                    <td>{device.status}</td>
-                    <td>{device.notes}</td>
+                 
+                    < tr key={device._id}>
+
+                      <td><Link to={"/devices/" + device._id}>
+                        {device.displayName}
+                      </Link></td>
+                      <td>{device.deviceId}</td>
+                      <td>{device.facility}</td>
+                      <td>{device.unit}</td>
+                      <td>{device.sip}</td>
+                      <td>{device.status}</td>
+                      <td>{device.notes}</td>
 
 
-                    {/* <DeleteBtn onClick={() => this.deleteDevice(device._id)} /> */}
-                  </tr>
+                      {/* <DeleteBtn onClick={() => this.deleteDevice(device._id)} /> */}
+                    </tr>
+                 
                 ))}
               </List>
             ) : (

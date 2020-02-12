@@ -1,3 +1,4 @@
 module.exports = {
-  Device: require("./device")
+  Device: require("./device"),
+  Contact: require('./contact')
 };

@@ -1,0 +1,48 @@
+[
+    {
+      "displayName": "SL.ME.405",
+      "deviceId": "1000001",
+      "facility": "SL",
+      "unit": "ME",
+      "floor": "03",
+      "phone": "(801)333-3333",
+      "contact": "Nursing department",
+      "unitNote": ""
+    },  {
+      "displayName": "RO.IN.405",
+      "deviceId": "1000001",
+      "facility": "RO",
+      "unit": "IN",
+      "floor": "02",
+      "phone": "(801)222-2222",
+      "contact": "Nursing department",
+      "unitNote": ""
+    },  {
+      "displayName": "PC.ON.405",
+      "deviceId": "1000001",
+      "facility": "PC",
+      "unit": "ON",
+      "floor": "07",
+      "phone": "(801)777-7777",
+      "contact": "Nursing department",
+      "unitNote": ""
+    },  {
+      "displayName": "SG.CA.405",
+      "deviceId": "1000001",
+      "facility": "SG",
+      "unit": "CA",
+      "floor": "05",
+      "phone": "Active",
+      "contact": "Nursing department",
+      "unitNote": ""
+    },  {
+      "displayName": "PR.PE.405",
+      "deviceId": "10005",
+      "facility": "PR",
+      "unit": "PE",
+      "floor": "09",
+      "phone": "(801)999-9999",
+      "contact": "Nursing department",
+      "unitNote": ""
+    }
+  ]

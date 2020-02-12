@@ -5,7 +5,6 @@ import Devices from "./pages/Devices";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
-import SearchBar from "./components/SearchBar";
 import NavH from "./components/NavH";
 import DashBoard from "./pages/DashBoard";
 import DeviceContact from "./pages/DeviceContact";

@@ -44,14 +44,14 @@ function NavH() {
                   </div>
                 </a>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <a className="nav-link" href="#">
                   <div className="text-left">
                     <h5><span className="fa fa-thumb-tack"></span> Ping All Devices</h5>
                   </div>
                 </a>
-              </li>
-              <li className="nav-item">
+              </li> */}
+              {/* <li className="nav-item">
                 <a className="nav-link" href="#">
                   <div className="text-left">
                     <h5><span className="fa fa-database"></span> Import DataBase</h5>
@@ -64,7 +64,7 @@ function NavH() {
                     <h5><span className="fa fa-sitemap"></span> JSON File</h5>
                   </div>
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

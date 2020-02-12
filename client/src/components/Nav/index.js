@@ -10,8 +10,8 @@ function Nav() {
         <div className="logo-image"><img src={logo} width="100px" alt="TDM"></img></div>
         <h3 className="text-nav">Telehealth Device Manager</h3>
       </a>
-      <div className="fa fa-user-circle-o" size="md-6" align-content="right" color="white"> Log Out
-      </div><br />
+      {/* <div className="fa fa-user-circle-o" size="md-6" align-content="right" color="white"> Log Out
+      </div><br /> */}
       {/* <SearchBar/> */}
     </nav>
   );

@@ -15,4 +15,8 @@ router
   .route('/search')
   .post(devicesController.findByDisplayName)
 
+router
+  .route('/DeviceContact')
+  .post(devicesController.findByDisplayName)
+
 module.exports = router;

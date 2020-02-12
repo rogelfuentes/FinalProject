@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 // import DeleteBtn from "../components/DeleteBtn";
-import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
-// import { Link } from "react-router-dom";
-import { Container } from "../components/Grid";
-// import { Col, Row, Container } from "../components/Grid";
-// import { List, ListItem } from "../components/List";
+import { Link } from "react-router-dom";
+import { Col, Row, Container} from "../components/Grid";
+import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 
 class DeviceContact extends Component {
@@ -36,7 +34,6 @@ class DeviceContact extends Component {
                     floor: "",
                     phone: "",
                     contact: "",
-                    floor: "",
                     unitNote: ""
                 })
             )
@@ -57,9 +54,10 @@ class DeviceContact extends Component {
     };
 
     handleFormSubmit = event => {
+        console.log(!(this.state.displayName) && !(this.state.deviceId) && !(this.state.facility) && !(this.state.unit) && !(this.state.floor) && !(this.state.phone) && !(this.state.contact) && !(this.state.unitNote))
         event.preventDefault();
-        if (this.state.displayName && this.state.deviceId && this.state.facility && this.state.unit && this.state.floor && this.state.phone && this.state.contact && this.state.floor && this.state.unitNote) {
-            API.saveDevice({
+        if ((this.state.displayName) && (this.state.deviceId) && (this.state.facility) && (this.state.unit) && (this.state.floor) && (this.state.phone) && (this.state.contact) && (this.state.unitNote)) {
+            API.saveContact({
                 displayName: this.state.displayName,
                 deviceId: this.state.deviceId,
                 facility: this.state.facility,
@@ -67,13 +65,16 @@ class DeviceContact extends Component {
                 floor: this.state.floor,
                 phone: this.state.phone,
                 contact: this.state.contact,
-                floor: this.state.floor,
                 unitNote: this.state.unitNote
             })
-                .then(res => this.loadDevices())
+                .then(res => ()=>{
+                    console.log(res)
+                    this.loadDevices()})
                 .catch(err => console.log(err));
         }
     };
+
+
     render() {
         return (
             <Container className="container">
@@ -141,12 +142,39 @@ class DeviceContact extends Component {
                         placeholder="Unit Notes (Optional)"
                     />
                     <FormBtn
-                        disabled={!(this.state.displayName && this.state.deviceId && this.state.facility && this.state.unit && this.state.sip && this.state.status)}
-                        onClick={this.handleFormSubmit}>Submit Device
-        </FormBtn>
+                        disabled={!(this.state.displayName) && !(this.state.deviceId) && !(this.state.facility) && !(this.state.unit) && !(this.state.floor) && !(this.state.phone) && !(this.state.contact) && !(this.state.unitNote)}   
+                        onClick={this.handleFormSubmit}>Submit Contact
+                    </FormBtn>
                 </form>
+                {/* <form>
+                    <Row>
+                        <Col size="12">
+                            {this.state.contacts.length ? (
+                                <List>
 
+                                    {this.state.contacts.map(contact => (
+
+                                        < tr key={contact._id}>
+                                            <td>{contact.displayName}</td>
+                                            <td>{contact.deviceId}</td>
+                                            <td>{contact.facility}</td>
+                                            <td>{contact.unit}</td>
+                                            <td>{contact.floor}</td>
+                                            <td>{contact.phone}</td>
+                                            <td>{contact.contact}</td>
+                                            <td>{contact.unitNote}</td>
+                                        </tr>
+
+                                    ))}
+                                </List>
+                            ) : (
+                                    <h3>No Results to Display</h3>
+                                )}
+                        </Col>
+                    </Row>
+                </form> */}
             </Container>
+
         )
     }
 };

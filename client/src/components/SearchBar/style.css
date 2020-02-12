@@ -1,10 +1,10 @@
 .form-inline {
 margin: 20px 0px;
-text-align: left;
+/* text-align: left; */
 }
 
 #search {
     width: 700px;
-    padding-left: 200px;
-    text-align: left;
+    /* padding-left: 200px; */
+    /* text-align: left; */
 }
